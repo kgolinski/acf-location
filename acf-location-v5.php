@@ -123,11 +123,12 @@ class acf_field_location extends acf_field {
 		*  Review the data of $field.
 		*  This will show what data is available
 		*/
-		
+
+		/*
 		echo '<pre>';
 			print_r( $field );
 		echo '</pre>';
-		
+		*/
 		
 		/*
 		*  Create a simple text input using the 'font_size' setting.
@@ -153,7 +154,7 @@ class acf_field_location extends acf_field {
 	*  @return	n/a
 	*/
 
-	/*
+	
 	
 	function input_admin_enqueue_scripts() {
 		
@@ -166,13 +167,13 @@ class acf_field_location extends acf_field {
 		
 		
 		// register & include CSS
-		wp_register_style( 'acf-input-location', "{$dir}css/input.css" ); 
-		wp_enqueue_style('acf-input-location');
+		//wp_register_style( 'acf-input-location', "{$dir}css/input.css" ); 
+		//wp_enqueue_style('acf-input-location');
 		
 		
 	}
 	
-	*/
+	
 	
 	
 	/*

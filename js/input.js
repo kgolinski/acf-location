@@ -1,11 +1,30 @@
 (function($){
 	
+	function setPosition( $el ) {
+		navigator.geolocation.getCurrentPosition(function(position){
+        		var lat = position.coords.latitude;
+				var lng = position.coords.longitude;
+				console.log($el.find('input').val());
+				$el.find('input').val(lat + ", " + lng);
+        	});
+	}
 	
 	function initialize_field( $el ) {
 		
 		//$el.doStuff();
-		
-	}
+		//console.log($el);
+		if(navigator.geolocation){
+			if($el.find('input').val()==''){
+        		setPosition($el);
+        	}
+        	$el.find('input').focus(function(){
+        		$(this).val('');
+        		setPosition($el);
+        	});
+        }
+	    else
+	        console.log("navigator.geolocation is not available");
+		}
 	
 	
 	if( typeof acf.add_action !== 'undefined' ) {
@@ -26,8 +45,8 @@
 		
 		acf.add_action('ready append', function( $el ){
 			
-			// search $el for fields of type 'FIELD_NAME'
-			acf.get_fields({ type : 'FIELD_NAME'}, $el).each(function(){
+			// search $el for fields of type 'location'
+			acf.get_fields({ type : 'location'}, $el).each(function(){
 				
 				initialize_field( $(this) );
 				

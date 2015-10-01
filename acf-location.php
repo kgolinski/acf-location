@@ -3,7 +3,7 @@
 /*
 Plugin Name: Advanced Custom Fields: Post location
 Plugin URI: https://github.com/kgolinski/acf-location
-Description: SHORT_DESCRIPTION
+Description: Simple plugin location for ACF
 Version: 1.0.0
 Author: Krzysztof Goliński
 Author URI: http://www.golinski.org
