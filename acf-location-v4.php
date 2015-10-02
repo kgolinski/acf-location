@@ -146,7 +146,7 @@ class acf_field_location extends acf_field {
 		
 		// register ACF scripts
 		wp_register_script( 'acf-input-location', $this->settings['dir'] . 'js/input.js', array('acf-input'), $this->settings['version'] );
-		wp_register_style( 'acf-input-location', $this->settings['dir'] . 'css/input.css', array('acf-input'), $this->settings['version'] ); 
+		//wp_register_style( 'acf-input-location', $this->settings['dir'] . 'css/input.css', array('acf-input'), $this->settings['version'] ); 
 		
 		
 		// scripts
@@ -155,10 +155,10 @@ class acf_field_location extends acf_field {
 		));
 
 		// styles
-		wp_enqueue_style(array(
+		/*wp_enqueue_style(array(
 			'acf-input-location',	
 		));
-		
+		*/
 		
 	}
 	

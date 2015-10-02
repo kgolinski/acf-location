@@ -91,7 +91,7 @@ class acf_field_location extends acf_field {
 		
 		acf_render_field_setting( $field, array(
 			'label'			=> __('Font Size','acf-location'),
-			'instructions'	=> __('Customise the input font size','acf-location'),
+			'instructions'	=> __('Customize the input font size','acf-location'),
 			'type'			=> 'number',
 			'name'			=> 'font_size',
 			'prepend'		=> 'px',
@@ -136,6 +136,7 @@ class acf_field_location extends acf_field {
 		
 		?>
 		<input type="text" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>" style="font-size:<?php echo $field['font_size'] ?>px;" />
+		<input type="button" name="reload" id="reload" value="Refresh" />
 		<?php
 	}
 	

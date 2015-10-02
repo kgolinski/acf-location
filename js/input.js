@@ -4,21 +4,19 @@
 		navigator.geolocation.getCurrentPosition(function(position){
         		var lat = position.coords.latitude;
 				var lng = position.coords.longitude;
-				console.log($el.find('input').val());
-				$el.find('input').val(lat + ", " + lng);
+				//console.log($el.find('input').val());
+				$el.find("input[type='text']").val(lat + "," + lng);
         	});
 	}
 	
 	function initialize_field( $el ) {
-		
-		//$el.doStuff();
-		//console.log($el);
 		if(navigator.geolocation){
-			if($el.find('input').val()==''){
+			if($el.find("input[type='text']").val()==''){
         		setPosition($el);
         	}
-        	$el.find('input').focus(function(){
-        		$(this).val('');
+
+        	$el.find('#reload').click(function(){
+        		$el.find("input[type='text']").val('');
         		setPosition($el);
         	});
         }
